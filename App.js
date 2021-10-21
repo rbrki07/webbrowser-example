@@ -2,6 +2,7 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { Button, StyleSheet, View } from "react-native";
 import * as WebBrowser from "expo-web-browser";
+import * as Linking from "expo-linking";
 
 const App = () => {
   return (
@@ -20,6 +21,10 @@ const App = () => {
           })
         }
         title={"Open Web Browser (custom)"}
+      />
+      <Button
+        onPress={() => Linking.openURL("https://expo.dev")}
+        title={"Open Web Browser (external)"}
       />
       <StatusBar style="auto" />
     </View>
